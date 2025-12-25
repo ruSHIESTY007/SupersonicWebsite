@@ -1,0 +1,139 @@
+/* HUD Color Variables*/
+:root {
+    --hud-color: #00ff41;
+    --hud-dim: #005c18;
+    --hud-alert: #ff3300;
+    --bg-color: #050505;
+    --panel-bg: rgba(0, 20, 5, 0.85);
+    --border-color: rgba(0, 255, 65, 0.3);
+}
+
+
+/* Add grid to bakcground*/
+body {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    background-color: var(--bg-color);
+    background-image:
+        linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent, 1px),
+        linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    color: var(--hud-color);
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    color: var(--hud-color);
+    text-shadow: 0 0 10px var(--hud-color);
+}
+
+p {
+    color: var(--hud-color);
+}
+
+#myCanvas {
+    border: 2px solid var(--hud-color);
+    background-color: rgba(0, 10, 3, 0.3);
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+}
+
+/* Tab styling */
+.tabs {
+    display: flex;
+    margin-bottom: 0px;
+    border-bottom: 2px solid var(--hud-color);
+}
+
+/* Individual tab buttons */
+.tab-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: 2px solid var(--hud-color);
+    border-bottom: 2px solid var(--hud-color); /* Remove bottom border */
+    background-color: transparent;
+    color: var(--hud-dim);
+    cursor: pointer;
+    margin-right: 2px;
+    border-radius: 8px 8px 0 0 ; /* Rounded corners */
+    position: relative;
+    top: 0;
+    transition: all 0.2s ease;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+.tab-button:not(.active):hover {
+    background-color: rgba(0, 255, 65, 0.1);
+    color: var(--hud-color);
+    transform: translateY(-2px);
+}
+
+.tab-button.active {
+    background-color: rgb(0, 255 ,65, 0.15);
+    color: var(--hud-color);
+    border-color: var(--hud-color);
+    border-bottom: 2px solid rgba(0, 20, 5, 0.85);
+    font-weight: bold;
+    top: 2px;
+    z-index: 10;
+    text-shadow: 0 0 8px var(--hud-color);
+}
+
+.mode-controls {
+    margin: 0;
+    padding: 15px;
+    border: 2px solid var(--hud-color);
+    border-top: none; /* Connects to tabs */
+    background-color: rgba(0, 20, 5, 0.85);
+}
+
+button:not(.tab-button) {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border: 2px solid var(--hud-color);
+    background-color: transparent;
+    color: var(--hud-color);
+    border-radius: 4px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    transition: all 0.3s ease;
+}
+
+button:not(.tab-button):hover {
+    background-color: var(--hud-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px var(var(--hud-color));
+}
+
+.parameter-control {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.parameter-control label {
+    min-width: 80px;
+    font-weight: bold;
+    color: var(--hud-color);
+}
+
+.parameter-control input[type="range"] {
+    flex: 1;
+    min-width: 150px;
+}
+
+.parameter-control input[type="number"] {
+    width: 80px;
+    padding: 5px;
+    border: 1px solid var(--hud-color);
+    background-color: rgba(0, 255, 65, 0.05);
+    color: var(--hud-color);
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+.parameter-control input[type="number"]:focus {
+    outline: none;
+    border-color: var(--hud-color);
+    box-shadow: 0 0 8px rgba(0, 255, 65, 0.3);
+}

@@ -1,0 +1,67 @@
+<!-- HTML stands for  HyperText Markup Langauge -->
+ <!DOCTYPE html>
+ <html lang = "en">
+    <!-- All information goes within here! -->
+     <head>
+        <!-- Metadata goes here (imports, CSS links, page data) -->
+         <title>This is my First Page!</title>
+         <!-- Now link the CSS descritiopn into this canvas -->
+          <link rel="stylesheet" href="style.css">
+
+     </head>
+
+     <body>
+        <!-- Visible content goes here. This is what your website will look like -->
+         <h1>Ok so what  do you want?? bro??? Hello?!! aashrith</h1>
+         <p>This is my first webpage!!!</p>
+         <p>Note: Make sample which shows case 1 2 and 3 for an airfoil</p>
+         <p>Fix the geometry validation thing.</p>
+         <p>Maybe start with the diamond formatted and allow user to change a couple parameters only like A, B, % th</p>
+         <p>Need to create start point for parametric, angle</p>
+
+
+         <!-- Add tabs here -->
+          <div class="tabs">
+            <button type="button" id="interactiveModeTab" class="tab-button">Interactive Mode</button>
+            <button type="button" id="parametricModeTab" class="tab-button active">Parametric Mode</button>
+          </div>
+
+
+          <!-- Parametric Mode Controls -->
+           <div id="parametricModeControls" class="mode-controls" style="display: block;">
+            <button type="button" id="calculateButtonParametric">CALCULATE</button>
+
+            <div class="parameter-control">
+              <label for="widthSlider">Width:</label>
+              <input type="range" id="widthSlider" min="0" max="750" value="400">
+              <input type="number" id="widthInput" min="0" max="750" value="400">
+            </div>
+
+            <div class="parameter-control">
+              <label for="heightSlider">Height:</label>
+              <input type="range" id="heightSlider" min="0" max="300" value="75">
+              <input type="number" id="heightInput" min="0" max="300" value="75">
+            </div>
+
+            <p>Parametric Controls Coming Soon!!</p>
+           </div>
+
+          <!-- Interactive Mode Controls -->
+           <div id="interactiveModeControls" class="mode-controls" style="display: none;">
+            <button type="button" id="calculateButtonInteractive">CALCULATE</button>
+            <button type="button" id="resetButtonInteractive">RESET</button>
+          </div>
+
+         <!-- This is to create a canvas -->
+          <canvas id="myCanvas"></canvas>
+
+
+        <!-- This is a link to a javascript file to interact with the website -->
+          <script src="script.js"></script>
+          <script src="geometryValidation.js"></script>
+
+     </body>
+
+
+
+ </html>
